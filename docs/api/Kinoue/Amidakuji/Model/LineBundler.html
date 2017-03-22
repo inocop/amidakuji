@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Kinoue\Amidakuji\Model\LineBundler | Amidakuji API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Kinoue_Amidakuji_Model_LineBundler" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Amidakuji API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Kinoue.html">Kinoue</a></li>
+                                        <li><a href="../../../Kinoue/Amidakuji.html">Amidakuji</a></li>
+                                        <li><a href="../../../Kinoue/Amidakuji/Model.html">Model</a></li>
+    
+                <li>LineBundler</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            LineBundler
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>LineBundler</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>あみだくじの線の保持クラス</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setInitialSetting">setInitialSetting</a>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $vLength, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $vLines, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $hLines)
+        
+                                            <p>設定値をセット</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHorizontalLine">addHorizontalLine</a>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $startX, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $startY, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $endY)
+        
+                                            <p>横線オブジェクトを追�</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVerticalLengthSetting">getVerticalLengthSetting</a>()
+        
+                                            <p>設定した縦線の長さのを取得</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVerticalLinesSetting">getVerticalLinesSetting</a>()
+        
+                                            <p>設定した縦線本数を取得</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHorizontalLinesSetting">getHorizontalLinesSetting</a>()
+        
+                                            <p>設定した横線本数を取得</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHorizontalLineList">getHorizontalLineList</a>()
+        
+                                            <p>横線オブジェクトのリストを取得</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExistsHorizontalLineByX">getExistsHorizontalLineByX</a>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $currentX)
+        
+                                            <p>指定した縦線に存在する横線オブジェクトのリストを取得</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNearestHorizontalLine">getNearestHorizontalLine</a>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $currentX, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $currentY)
+        
+                                            <p>指定した縦線の点より上にあり、直近の横線オブジェクトを取得</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 28</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setInitialSetting">
+        <div class="location">at line         line 39</div>
+        <code>                    void
+    <strong>setInitialSetting</strong>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $vLength, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $vLines, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $hLines)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>設定値をセット</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
+                <td>$vLength</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
+                <td>$vLines</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
+                <td>$hLines</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHorizontalLine">
+        <div class="location">at line         line 51</div>
+        <code>                    void
+    <strong>addHorizontalLine</strong>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $startX, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $startY, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $endY)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>横線オブジェクトを追�</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
+                <td>$startX</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
+                <td>$startY</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
+                <td>$endY</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVerticalLengthSetting">
+        <div class="location">at line         line 62</div>
+        <code>                    int
+    <strong>getVerticalLengthSetting</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>設定した縦線の長さのを取得</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVerticalLinesSetting">
+        <div class="location">at line         line 72</div>
+        <code>                    int
+    <strong>getVerticalLinesSetting</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>設定した縦線本数を取得</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHorizontalLinesSetting">
+        <div class="location">at line         line 82</div>
+        <code>                    int
+    <strong>getHorizontalLinesSetting</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>設定した横線本数を取得</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHorizontalLineList">
+        <div class="location">at line         line 92</div>
+        <code>                    <a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>[]
+    <strong>getHorizontalLineList</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>横線オブジェクトのリストを取得</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExistsHorizontalLineByX">
+        <div class="location">at line         line 102</div>
+        <code>                    <a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>[]
+    <strong>getExistsHorizontalLineByX</strong>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $currentX)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>指定した縦線に存在する横線オブジェクトのリストを取得</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
+                <td>$currentX</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNearestHorizontalLine">
+        <div class="location">at line         line 127</div>
+        <code>                    <a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>
+    <strong>getNearestHorizontalLine</strong>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $currentX, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $currentY)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>指定した縦線の点より上にあり、直近の横線オブジェクトを取得</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
+                <td>$currentX</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
+                <td>$currentY</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
