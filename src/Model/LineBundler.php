@@ -7,9 +7,10 @@
 namespace Kinoue\Amidakuji\Model;
 
 use Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject;
+use Kinoue\Amidakuji\Model\Validation\LineValidation;
 
 /**
- * あみだくじの線の保持クラス
+ * あみだくじの線の管理クラス
  *
  * @author kinoue
  *
@@ -18,9 +19,7 @@ class LineBundler
 {
 
     private $vLengthSetting;
-
     private $vLinesSetting;
-
     private $hLinesSetting;
 
     /**
@@ -29,34 +28,77 @@ class LineBundler
      */
     private $hLineList = [];
 
-    public function __construct()
-    {}
-
     /**
-     * 設定値をセット
      *
-     * @param int $vLength
-     * @param int $vLines
-     * @param int $hLines
-     *
-     * @return void
+     * @var LineValidation
      */
-    public function setInitialSetting(int $vLength, int $vLines, int $hLines)
+    private $lineValidation;
+
+    public function __construct()
     {
-        $this->vLengthSetting = $vLength;
-        $this->vLinesSetting = $vLines;
-        $this->hLinesSetting = $hLines;
+        $this->lineValidation = new LineValidation();
     }
 
     /**
-     * 横線オブジェクトを追加
+     * 初期設定値を入力
      *
-     * @return void
+     * @return bool
      */
-    public function addHorizontalLine(int $startX, int $startY, int $endY)
+    public function inputInitialSetting(): bool
     {
-        $hLineObject = new HorizontalLineObject($startX, $startY, $endY);
-        $this->hLineList[] = $hLineObject;
+        echo ('縦線の長さ、縦線の本数、横線の本数を半角スペース区切りで入力してください。' . PHP_EOL);
+        $stdin = trim(fgets(STDIN));
+        $params = explode(' ', $stdin);
+
+        // 初回入力値のチェック
+        $this->lineValidation->validInitialSettig($params);
+        if ($this->lineValidation->getStatus()) {
+            $this->vLengthSetting = (int) $params[0];
+            $this->vLinesSetting =  (int) $params[1];
+            $this->hLinesSetting =  (int) $params[2];
+            return true;
+        }
+
+        echo $this->lineValidation->getErrorMessage();
+        return false;
+    }
+
+    /**
+     * 横線の情報を入力
+     *
+     * @return bool
+     */
+    public function inputHorizontalLines(): bool
+    {
+        if ($this->hLinesSetting == 0) {
+            return true;
+        }
+
+        echo ('横線の開始点(X軸)、横線の開始点(Y軸)、横線の終了点(Y軸)を半角スペース区切りで入力してください。' . PHP_EOL .
+            '(exitでプログラム中断)' . PHP_EOL);
+
+        // 横線の本数分登録されるまでループ
+        while (count($this->hLineList) < $this->hLinesSetting) {
+            $stdin = trim(fgets(STDIN));
+            if ($stdin == 'exit') {
+                echo ('プログラムを中断しました。' . PHP_EOL);
+                return false;
+            }
+            $params = explode(' ', $stdin);
+
+            // 入力値のチェック
+            $this->lineValidation->reset();
+            $this->lineValidation->validHorizontalLine($params, $this);
+            if ($this->lineValidation->getStatus()) {
+                $hLineObject = new HorizontalLineObject((int) $params[0], (int) $params[1], (int) $params[2]);
+                $this->hLineList[] = $hLineObject;
+                continue;
+            }
+
+            echo $this->lineValidation->getErrorMessage();
+        }
+
+        return true;
     }
 
     /**
