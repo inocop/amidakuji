@@ -34,9 +34,9 @@ class LineBundler
      */
     private $lineValidation;
 
-    public function __construct()
+    public function __construct(LineValidation $lineValidation)
     {
-        $this->lineValidation = new LineValidation();
+        $this->lineValidation = $lineValidation;
     }
 
     /**
@@ -70,6 +70,8 @@ class LineBundler
      */
     public function inputHorizontalLines(): bool
     {
+        assert(isset($this->hLinesSetting));
+
         if ($this->hLinesSetting == 0) {
             return true;
         }

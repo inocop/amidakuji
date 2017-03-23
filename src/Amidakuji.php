@@ -7,6 +7,7 @@
 namespace Kinoue\Amidakuji;
 
 use Kinoue\Amidakuji\Model\LineBundler;
+use Kinoue\Amidakuji\Model\Validation\LineValidation;
 
 /**
  * あみだくじプログラム
@@ -24,7 +25,8 @@ class Amidakuji
 
     public function __construct()
     {
-        $this->lineBundler = new LineBundler();
+        $lineValidation = new LineValidation();
+        $this->lineBundler = new LineBundler($lineValidation);
     }
 
     /**

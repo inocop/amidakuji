@@ -2,6 +2,7 @@
 
 namespace Kinoue\AmidakujiTest;
 
+use Kinoue\Amidakuji\Amidakuji;
 use Kinoue\Amidakuji\Model\LineBundler;
 use Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject;
 use Kinoue\Amidakuji\Model\AmidakujiConst;
@@ -45,7 +46,7 @@ class AmidakujiTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(2 . PHP_EOL, $output);
     }
 
-    public function test初期入力のエラー時に横線の入力処理が呼ばれないことを確認()
+    public function test初期設定入力エラー時に横線の入力処理が呼ばれないことを確認()
     {
         $mockLineBundler = $this->createMock(LineBundler::class);
         $mockLineBundler->method('inputInitialSetting')->willReturn(false);
@@ -57,7 +58,7 @@ class AmidakujiTest extends \PHPUnit_Framework_TestCase
         $this->skeleton->start();
     }
 
-    public function test横線入力のエラー時に正解ルートの計算処理が呼ばれないことを確認()
+    public function test横線入力エラー時にルート計算処理が呼ばれないことを確認()
     {
         $mockLineBundler = $this->createMock(LineBundler::class);
         $mockLineBundler->method('inputInitialSetting')->willReturn(true);
