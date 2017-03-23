@@ -26,7 +26,7 @@ class AmidakujiTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\Kinoue\Amidakuji\Amidakuji', $actual);
     }
 
-    public function testモックが返す値での正解ルートが表示されることを確認()
+    public function testモックが返す値での正解ルートが表示されること()
     {
         $mockLineBundler = $this->createMock(LineBundler::class);
         $mockLineBundler->method('inputInitialSetting')->willReturn(true);
@@ -46,7 +46,7 @@ class AmidakujiTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(2 . PHP_EOL, $output);
     }
 
-    public function test初期設定入力エラー時に横線の入力処理が呼ばれないことを確認()
+    public function test初期設定入力エラー時に横線の入力処理が呼ばれないこと()
     {
         $mockLineBundler = $this->createMock(LineBundler::class);
         $mockLineBundler->method('inputInitialSetting')->willReturn(false);
@@ -58,7 +58,7 @@ class AmidakujiTest extends \PHPUnit_Framework_TestCase
         $this->skeleton->start();
     }
 
-    public function test横線入力エラー時にルート計算処理が呼ばれないことを確認()
+    public function test横線入力エラー時にルート計算処理が呼ばれないこと()
     {
         $mockLineBundler = $this->createMock(LineBundler::class);
         $mockLineBundler->method('inputInitialSetting')->willReturn(true);
@@ -72,6 +72,4 @@ class AmidakujiTest extends \PHPUnit_Framework_TestCase
         $this->skeleton->lineBundler = $mockLineBundler;
         $this->skeleton->start();
     }
-
-
 }

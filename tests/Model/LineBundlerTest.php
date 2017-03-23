@@ -8,17 +8,12 @@ use Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject;
 
 class LineBundlerTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * @var LineBundler
-     */
-    protected $lineBundler;
-
     protected function setUp()
     {
         parent::setUp();
     }
 
-    public function test指定した縦線に存在する横線オブジェクトが正しく取得できていることを確認()
+    public function test指定した縦線に存在する横線オブジェクトが正しく取得できること()
     {
         $hLines[0] = new HorizontalLineObject(2, 2, 1);
         $hLines[1] = new HorizontalLineObject(3, 3, 3);
@@ -47,5 +42,28 @@ class LineBundlerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($resultList[2]->getStartY(), 4);
         $this->assertEquals($resultList[2]->getEndY(),   3);
         $this->assertEquals($resultList[2]->isDirectionRight(), false);
+    }
+
+
+    public function test指定した位置のひとつ上にある横線オブジェクトを正しく取得できること()
+    {
+        $hLines[0] = new HorizontalLineObject(2, 2, 1);
+        $hLines[1] = new HorizontalLineObject(3, 3, 3);
+        $hLines[2] = new HorizontalLineObject(1, 3, 4);
+        $hLines[3] = new HorizontalLineObject(2, 6, 5);
+
+        // リフレクションでprivate変数に代入
+        $lineBundler = new LineBundler(new LineValidation());
+        $refObject = new \ReflectionObject($lineBundler);
+        $refProperty = $refObject->getProperty('hLineList');
+        $refProperty->setAccessible(true);
+        $refProperty->setValue($lineBundler, $hLines);
+
+        $nearestHLine = $lineBundler->getNearestHorizontalLine(2, 5);
+
+        $this->assertEquals($nearestHLine->getStartX(), 2);
+        $this->assertEquals($nearestHLine->getStartY(), 4);
+        $this->assertEquals($nearestHLine->getEndY(),   3);
+        $this->assertEquals($nearestHLine->isDirectionRight(), false);
     }
 }
