@@ -11,13 +11,13 @@ use Kinoue\Amidakuji\Model\LineBundler;
 use Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject;
 
 /**
- * 線の入力値バリデーション
+ * 線に関する入力値を検証する
  */
 class LineValidation extends BaseValidation
 {
 
     /**
-     * 初回入力値のバリデーション
+     * 初期設定値のバリデーション
      *
      * @param array $params
      */

@@ -10,7 +10,8 @@ use Kinoue\Amidakuji\Model\LineBundler;
 use Kinoue\Amidakuji\Model\Validation\LineValidation;
 
 /**
- * あみだくじプログラム
+ * あみだくじプログラムのコントローラー
+ * 入力値の受け付けと正解ルートを表示する
  *
  * @author kinoue
  */

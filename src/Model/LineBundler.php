@@ -10,7 +10,8 @@ use Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject;
 use Kinoue\Amidakuji\Model\Validation\LineValidation;
 
 /**
- * あみだくじの線の管理クラス
+ * あみだくじの線をまとめて保持し、
+ * 条件に応じた線の情報を返すロジックを持つ
  *
  * @author kinoue
  *
@@ -50,7 +51,7 @@ class LineBundler
         $stdin = trim(fgets(STDIN));
         $params = explode(' ', $stdin);
 
-        // 初回入力値のチェック
+        //  初期設定値のチェック
         $this->lineValidation->validInitialSettig($params);
         if ($this->lineValidation->getStatus()) {
             $this->vLengthSetting = (int) $params[0];

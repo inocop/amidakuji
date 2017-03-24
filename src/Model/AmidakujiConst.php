@@ -7,7 +7,7 @@
 namespace Kinoue\Amidakuji\Model;
 
 /**
- * あみだくじで使用する定数
+ * あみだくじプログラムで使用する定数
  */
 class AmidakujiConst
 {
