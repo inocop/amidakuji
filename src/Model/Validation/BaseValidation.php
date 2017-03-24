@@ -7,7 +7,7 @@
 namespace Kinoue\Amidakuji\Model\Validation;
 
 /**
- * 汎用的なデータ検証の処理を持つ
+ * 汎用的なデータ検証の処理と状態を持つ
  */
 class BaseValidation
 {

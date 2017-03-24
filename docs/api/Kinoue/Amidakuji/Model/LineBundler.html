@@ -87,7 +87,8 @@
     
 
             <div class="description">
-            <p>あみだくじの線の保持クラス</p>                    </div>
+            <p>あみだくじの線をまとめて保持し、
+条件に応じた線の情報を返すロジックを持つ</p>                    </div>
     
     
     
@@ -100,7 +101,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>()
+                    <a href="#method___construct">__construct</a>(<a href="../../../Kinoue/Amidakuji/Model/Validation/LineValidation.html"><abbr title="Kinoue\Amidakuji\Model\Validation\LineValidation">LineValidation</abbr></a> $lineValidation)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -108,22 +109,22 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setInitialSetting">setInitialSetting</a>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $vLength, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $vLines, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $hLines)
+                    <a href="#method_inputInitialSetting">inputInitialSetting</a>()
         
-                                            <p>設定値をセット</p>                </div>
+                                            <p>初期設定値を入力</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addHorizontalLine">addHorizontalLine</a>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $startX, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $startY, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $endY)
+                    <a href="#method_inputHorizontalLines">inputHorizontalLines</a>()
         
-                                            <p>横線オブジェクトを追�</p>                </div>
+                                            <p>横線の情報を入力</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -194,9 +195,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line         line 28</div>
+        <div class="location">at line         line 38</div>
         <code>                    
-    <strong>__construct</strong>()
+    <strong>__construct</strong>(<a href="../../../Kinoue/Amidakuji/Model/Validation/LineValidation.html"><abbr title="Kinoue\Amidakuji\Model\Validation\LineValidation">LineValidation</abbr></a> $lineValidation)
         </code>
     </h3>
     <div class="details">
@@ -204,6 +205,16 @@
     
 
                 <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Kinoue/Amidakuji/Model/Validation/LineValidation.html"><abbr title="Kinoue\Amidakuji\Model\Validation\LineValidation">LineValidation</abbr></a></td>
+                <td>$lineValidation</td>
+                <td></td>
+            </tr>
+            </table>
+
             
             
             
@@ -212,10 +223,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_setInitialSetting">
-        <div class="location">at line         line 39</div>
-        <code>                    void
-    <strong>setInitialSetting</strong>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $vLength, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $vLines, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $hLines)
+                    <h3 id="method_inputInitialSetting">
+        <div class="location">at line         line 48</div>
+        <code>                    bool
+    <strong>inputInitialSetting</strong>()
         </code>
     </h3>
     <div class="details">
@@ -223,34 +234,14 @@
     
 
                     <div class="method-description">
-                                    <p>設定値をセット</p>                                </div>
+                                    <p>初期設定値を入力</p>                                </div>
                 <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
-                <td>$vLength</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
-                <td>$vLines</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
-                <td>$hLines</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>bool</td>
             <td></td>
         </tr>
     </table>
@@ -262,10 +253,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_addHorizontalLine">
-        <div class="location">at line         line 51</div>
-        <code>                    void
-    <strong>addHorizontalLine</strong>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $startX, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $startY, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $endY)
+                    <h3 id="method_inputHorizontalLines">
+        <div class="location">at line         line 72</div>
+        <code>                    bool
+    <strong>inputHorizontalLines</strong>()
         </code>
     </h3>
     <div class="details">
@@ -273,34 +264,14 @@
     
 
                     <div class="method-description">
-                                    <p>横線オブジェクトを追�</p>                                </div>
+                                    <p>横線の情報を入力</p>                                </div>
                 <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
-                <td>$startX</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
-                <td>$startY</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><abbr title="Kinoue\Amidakuji\Model\int">int</abbr></td>
-                <td>$endY</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>bool</td>
             <td></td>
         </tr>
     </table>
@@ -313,7 +284,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVerticalLengthSetting">
-        <div class="location">at line         line 62</div>
+        <div class="location">at line         line 112</div>
         <code>                    int
     <strong>getVerticalLengthSetting</strong>()
         </code>
@@ -343,7 +314,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVerticalLinesSetting">
-        <div class="location">at line         line 72</div>
+        <div class="location">at line         line 122</div>
         <code>                    int
     <strong>getVerticalLinesSetting</strong>()
         </code>
@@ -373,7 +344,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getHorizontalLinesSetting">
-        <div class="location">at line         line 82</div>
+        <div class="location">at line         line 132</div>
         <code>                    int
     <strong>getHorizontalLinesSetting</strong>()
         </code>
@@ -403,7 +374,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getHorizontalLineList">
-        <div class="location">at line         line 92</div>
+        <div class="location">at line         line 142</div>
         <code>                    <a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>[]
     <strong>getHorizontalLineList</strong>()
         </code>
@@ -433,7 +404,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getExistsHorizontalLineByX">
-        <div class="location">at line         line 102</div>
+        <div class="location">at line         line 152</div>
         <code>                    <a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>[]
     <strong>getExistsHorizontalLineByX</strong>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $currentX)
         </code>
@@ -473,7 +444,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getNearestHorizontalLine">
-        <div class="location">at line         line 127</div>
+        <div class="location">at line         line 177</div>
         <code>                    <a href="../../../Kinoue/Amidakuji/Model/CustomObject/HorizontalLineObject.html"><abbr title="Kinoue\Amidakuji\Model\CustomObject\HorizontalLineObject">HorizontalLineObject</abbr></a>
     <strong>getNearestHorizontalLine</strong>(<abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $currentX, <abbr title="Kinoue\Amidakuji\Model\int">int</abbr> $currentY)
         </code>
