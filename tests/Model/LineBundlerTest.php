@@ -15,9 +15,7 @@ class LineBundlerTest extends \PHPUnit_Framework_TestCase
 
     public function test指定した縦線に存在する横線オブジェクトが正しく取得できること()
     {
-        $hLines[0] = new HorizontalLineObject(2, 2, 1);
-        $hLines[1] = new HorizontalLineObject(3, 3, 3);
-        $hLines[2] = new HorizontalLineObject(1, 3, 4);
+        $hLines = $this->getTestHorizontalObjectList();
 
         // リフレクションでprivate変数に代入
         $lineBundler = new LineBundler(new LineValidation());
@@ -26,31 +24,27 @@ class LineBundlerTest extends \PHPUnit_Framework_TestCase
         $refProperty->setAccessible(true);
         $refProperty->setValue($lineBundler, $hLines);
 
-        $resultList = $lineBundler->getExistsHorizontalLineByX(2);
+        $resultList = $lineBundler->getExistsHorizontalLineByX(3);
 
         // 2件取得されているか
         $this->assertCount(2, $resultList);
 
-        // 値が正しいか
-        $this->assertEquals($resultList[0]->getStartX(), 2);
-        $this->assertEquals($resultList[0]->getStartY(), 2);
-        $this->assertEquals($resultList[0]->getEndY(),   1);
-        $this->assertEquals($resultList[0]->isDirectionRight(), true);;
+        // [3, 4, 5]が取得できているか
+        $this->assertEquals($resultList[1]->getStartX(), 3);
+        $this->assertEquals($resultList[1]->getStartY(), 4);
+        $this->assertEquals($resultList[1]->getEndY(),   5);
+        $this->assertEquals($resultList[1]->isDirectionRight(), true);;
 
-        // 方向変換による値が変更されているか
-        $this->assertEquals($resultList[2]->getStartX(), 2);
-        $this->assertEquals($resultList[2]->getStartY(), 4);
-        $this->assertEquals($resultList[2]->getEndY(),   3);
-        $this->assertEquals($resultList[2]->isDirectionRight(), false);
+        // [2, 6, 5]の横線が方向変換されて取得できているか
+        $this->assertEquals($resultList[3]->getStartX(), 3);
+        $this->assertEquals($resultList[3]->getStartY(), 5);
+        $this->assertEquals($resultList[3]->getEndY(),   6);
+        $this->assertEquals($resultList[3]->isDirectionRight(), false);
     }
-
 
     public function test指定した位置のひとつ上にある横線オブジェクトを正しく取得できること()
     {
-        $hLines[0] = new HorizontalLineObject(2, 2, 1);
-        $hLines[1] = new HorizontalLineObject(3, 3, 3);
-        $hLines[2] = new HorizontalLineObject(1, 3, 4);
-        $hLines[3] = new HorizontalLineObject(2, 6, 5);
+        $hLines = $this->getTestHorizontalObjectList();
 
         // リフレクションでprivate変数に代入
         $lineBundler = new LineBundler(new LineValidation());
@@ -61,9 +55,20 @@ class LineBundlerTest extends \PHPUnit_Framework_TestCase
 
         $nearestHLine = $lineBundler->getNearestHorizontalLine(2, 5);
 
+        // [1, 3, 4]の横線が左向きに変換されて取得できていること
         $this->assertEquals($nearestHLine->getStartX(), 2);
         $this->assertEquals($nearestHLine->getStartY(), 4);
         $this->assertEquals($nearestHLine->getEndY(),   3);
         $this->assertEquals($nearestHLine->isDirectionRight(), false);
+    }
+
+    private function getTestHorizontalObjectList()
+    {
+        $hLines[0] = new HorizontalLineObject(1, 2, 1);
+        $hLines[1] = new HorizontalLineObject(3, 4, 5);
+        $hLines[2] = new HorizontalLineObject(1, 3, 4);
+        $hLines[3] = new HorizontalLineObject(2, 6, 5);
+
+        return $hLines;
     }
 }
