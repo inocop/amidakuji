@@ -11,7 +11,7 @@ amidakuji/
 ├── docs/              ... ドキュメントを配置
 │    ├── api/              ... APIドキュメント
 │    ├── coverage/         ... カバレッジレポート
-│    └── class_design.md/  ... クラス設計
+│    └── class_design/     ... クラス設計
 ├── composer.json      ... Composer設定ファイル
 ├── composer.lock      ... Composerロックファイル
 └── sami_config.php    ... sami(APIドキュメント作成ツール)の設定ファイル
