@@ -38,7 +38,7 @@ class Amidakuji
         // あみだくじの入力処理
         $inputDone = ($this->lineBundler->inputInitialSetting() &&
                       $this->lineBundler->inputHorizontalLines());
-        if (!$inputDone){
+        if (!$inputDone) {
             return;
         }
 

@@ -30,24 +30,30 @@ class LineValidation extends BaseValidation
         }
 
         // 値の範囲をチェック
-        $this->validIntRange($params[0],
-                             AmidakujiConst::VERTICAL_MIN_LENGTH,
-                             AmidakujiConst::VERTICAL_MAX_LENGTH,
-                             '縦線の長さ');
-        $this->validIntRange($params[1],
-                             AmidakujiConst::VERTICAL_MIN_LINES,
-                             AmidakujiConst::VERTICAL_MAX_LINES,
-                             '縦線の本数');
-        $this->validIntRange($params[2],
-                             AmidakujiConst::HORIZONTAL_MIN_LINES,
-                             AmidakujiConst::HORIZONTAL_MAX_LINES,
-                             '横線の本数');
+        $this->validIntRange(
+            $params[0],
+            AmidakujiConst::VERTICAL_MIN_LENGTH,
+            AmidakujiConst::VERTICAL_MAX_LENGTH,
+            '縦線の長さ'
+        );
+        $this->validIntRange(
+            $params[1],
+            AmidakujiConst::VERTICAL_MIN_LINES,
+            AmidakujiConst::VERTICAL_MAX_LINES,
+            '縦線の本数'
+        );
+        $this->validIntRange(
+            $params[2],
+            AmidakujiConst::HORIZONTAL_MIN_LINES,
+            AmidakujiConst::HORIZONTAL_MAX_LINES,
+            '横線の本数'
+        );
     }
 
     /**
      * 横線入力値のバリデーション
      *
-     * @param array $params
+     * @param array       $params
      * @param LineBundler $lineBundler
      */
     public function validHorizontalLine(array $params, LineBundler $lineBundler)
