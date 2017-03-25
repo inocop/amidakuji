@@ -34,6 +34,14 @@ amidakuji/
 
 * PHP 7.0.16
 
+#### 構築手順
+
+```shell
+$ git clone https://github.com/inocop/amidakuji.git
+$ cd amidakuji
+$ composer install
+```
+
 ### 実行方法
 
 ```shell
