@@ -53,7 +53,7 @@
         ],
         "sami": [
             "sami.php update sami_config.php"
-        ],
+        ]
     },
     "extra": {
         "branch-alias": {

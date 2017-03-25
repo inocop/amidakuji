@@ -31,7 +31,12 @@ class Amidakuji
     }
 
     /**
-     * あみだくじプログラム開始
+     * あみだくじプログラムの開始関数
+     *
+     * 初期設定値と横線の入力処理と
+     * ルート計算処理の結果を出力する。
+     *
+     * @param int $targetGoal
      */
     public function start(int $targetGoal = 1)
     {
@@ -42,7 +47,7 @@ class Amidakuji
             return;
         }
 
-        // あみだくじの正解ルート計算
+        // あみだくじのルート計算
         $currentX = $targetGoal;
         $currentY = $this->lineBundler->getVerticalLengthSetting();
 

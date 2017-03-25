@@ -43,6 +43,8 @@ class LineBundler
     /**
      * 初期設定値を入力
      *
+     * 縦線の長さ・本数、横線の本数の入力値を対話形式で受け取る。
+     *
      * @return bool
      */
     public function inputInitialSetting(): bool
@@ -66,6 +68,10 @@ class LineBundler
 
     /**
      * 横線の情報を入力
+     *
+     * 横線の開始点(X軸)、横線の開始点(Y軸)、横線の終了点(Y軸)の
+     * 入力値を対話形式で受け取る。
+     * 入力値によっては無限にバリデーションエラーが発生するのでexitで入力を中断する。
      *
      * @return bool
      */
@@ -147,6 +153,12 @@ class LineBundler
     /**
      * 指定した縦線に存在する横線オブジェクトのリストを取得
      *
+     * 開始位置(X軸)、または(開始位置(X軸) - 1)が$currentXと等しい場合に
+     * 指定の縦線上に存在する横線と判定する。
+     * (開始位置(X軸) - 1)の場合はあみだくじで左へ移動することになるため
+     * 開始位置(X軸)を$currentXにし、Y軸の開始位置と終了位置を入れ替る。
+     *
+     * @param int $currentX
      * @return HorizontalLineObject[]
      */
     public function getExistsHorizontalLineByX(int $currentX): array
@@ -170,9 +182,13 @@ class LineBundler
     /**
      * 指定した縦線の点より上にあり、直近の横線オブジェクトを取得
      *
+     * 指定の縦線上にある横線リストを取得する。
+     * 横線リストから開始位置（Y軸）が$currentYより小さい、かつ最大の横線を取得する。
+     * $currentYより小さい横線が存在しない場合はNULLを返す。
+     *
      * @param int $currentX
      * @param int $currentY
-     * @return HorizontalLineObject
+     * @return HorizontalLineObject | NULL
      */
     public function getNearestHorizontalLine(int $currentX, int $currentY)
     {

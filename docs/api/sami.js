@@ -22,7 +22,7 @@
             
             {"type": "Class", "fromName": "Kinoue\\Amidakuji", "fromLink": "Kinoue/Amidakuji.html", "link": "Kinoue/Amidakuji/Amidakuji.html", "name": "Kinoue\\Amidakuji\\Amidakuji", "doc": "&quot;\u3042\u307f\u3060\u304f\u3058\u30d7\u30ed\u30b0\u30e9\u30e0\u306e\u30b3\u30f3\u30c8\u30ed\u30fc\u30e9\u30fc\n\u5165\u529b\u5024\u306e\u53d7\u3051\u4ed8\u3051\u3068\u6b63\u89e3\u30eb\u30fc\u30c8\u3092\u8868\u793a\u3059\u308b&quot;"},
                                                         {"type": "Method", "fromName": "Kinoue\\Amidakuji\\Amidakuji", "fromLink": "Kinoue/Amidakuji/Amidakuji.html", "link": "Kinoue/Amidakuji/Amidakuji.html#method___construct", "name": "Kinoue\\Amidakuji\\Amidakuji::__construct", "doc": "&quot;&quot;"},
-                    {"type": "Method", "fromName": "Kinoue\\Amidakuji\\Amidakuji", "fromLink": "Kinoue/Amidakuji/Amidakuji.html", "link": "Kinoue/Amidakuji/Amidakuji.html#method_start", "name": "Kinoue\\Amidakuji\\Amidakuji::start", "doc": "&quot;\u3042\u307f\u3060\u304f\u3058\u30d7\u30ed\u30b0\u30e9\u30e0\u958b\u59cb&quot;"},
+                    {"type": "Method", "fromName": "Kinoue\\Amidakuji\\Amidakuji", "fromLink": "Kinoue/Amidakuji/Amidakuji.html", "link": "Kinoue/Amidakuji/Amidakuji.html#method_start", "name": "Kinoue\\Amidakuji\\Amidakuji::start", "doc": "&quot;\u3042\u307f\u3060\u304f\u3058\u30d7\u30ed\u30b0\u30e9\u30e0\u306e\u958b\u59cb\u95a2\u6570&quot;"},
             
             {"type": "Class", "fromName": "Kinoue\\Amidakuji\\Exception", "fromLink": "Kinoue/Amidakuji/Exception.html", "link": "Kinoue/Amidakuji/Exception/ExceptionInterface.html", "name": "Kinoue\\Amidakuji\\Exception\\ExceptionInterface", "doc": "&quot;&quot;"},
                     

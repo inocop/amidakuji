@@ -19,6 +19,9 @@ class LineValidation extends BaseValidation
     /**
      * 初期設定値のバリデーション
      *
+     * 項目数が3つであること、
+     * 縦線の長さ・本数、横線の本数が規定値内であることを検証
+     *
      * @param array $params
      */
     public function validInitialSettig(array $params)
@@ -52,6 +55,9 @@ class LineValidation extends BaseValidation
 
     /**
      * 横線入力値のバリデーション
+     *
+     * 項目数が3つであること、
+     * 端点の重複、線の交差がないことを検証
      *
      * @param array       $params
      * @param LineBundler $lineBundler
