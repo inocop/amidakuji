@@ -9,6 +9,9 @@ amidakuji/
 ├── vendor/            ... Composerのvendorフォルダ
 ├── bin/               ... Shellスクリプトを配置
 ├── docs/              ... ドキュメントを配置
+│    ├── api/              ... APIドキュメント
+│    ├── coverage/         ... カバレッジレポート
+│    └── class_design.md/  ... クラス設計
 ├── composer.json      ... Composer設定ファイル
 ├── composer.lock      ... Composerロックファイル
 └── sami_config.php    ... sami(APIドキュメント作成ツール)の設定ファイル
@@ -45,3 +48,17 @@ $ ./bin/docker-run.sh
 3 1 2
 4
 ```
+
+### テスト実行
+
+```shell
+$ cd amidakuji
+$ ./bin/docker-run-test.sh
+```
+
+### APIドキュメント作成
+
+```shell
+$ composer sami
+```
+
